@@ -22,3 +22,23 @@ li {
 a {
   text-decoration: none;
 }
+
+.progress {
+  height: 20px;
+}
+
+.progress-bar {
+  background-color: #007bff; /* Couleur de la barre de progression */
+  color: white; /* Couleur du texte affichant le pourcentage */
+  width: 0; /* Largeur initiale de la barre de progression */
+  transition: width 0.6s ease; /* Transition fluide lors de l'ajustement de la largeur */
+}
+
+/* Optionnel : ajustement du style pour le texte affichant le pourcentage */
+.progress-bar::after {
+  content: attr(aria-valuenow) "%"; /* Affiche le pourcentage */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
